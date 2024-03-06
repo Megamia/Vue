@@ -25,17 +25,17 @@ export default {
 </script>
 
 <style>
-.hello{
+.hello {
   display: flex;
-flex-direction: row;
-  flex:1
+  flex-direction: row;
+  flex: 1;
 }
-.SiderBar{
+.SiderBar {
   display: flex;
 }
 .main {
   display: flex;
+
   flex-direction: column;
 }
-
 </style>

@@ -13,12 +13,8 @@ export default {
 </script>
 
 <style>
-.user{
+.user {
   display: flex;
   flex-direction: column;
 }
-
-
-
-
 </style>
