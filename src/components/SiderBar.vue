@@ -14,8 +14,13 @@
 <script>
 export default {
   name: "SiderBar",
-  
 };
 </script>
 
-<style></style>
+<style>
+.sidebar ul {
+  display: flex;
+  flex-direction :column;
+  gap: 20px;
+}
+</style>
