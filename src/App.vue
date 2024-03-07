@@ -4,9 +4,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
-// import SiderBar from './components/SiderBar.vue';
 
-// import HomePage from './pages/HomePage.vue';
 export default {
   name: 'App',
   components: {

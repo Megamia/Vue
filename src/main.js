@@ -1,12 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from './pages/HomePage';
+import DashBoard from './pages/DashBoard';
 import AboutPage from './pages/AboutPage';
 
 
 const routes = [
-    {path: '/HomePage',component: HomePage},
+    {path: '/DashBoard',component: DashBoard},
     {path: '/AboutPage',component: AboutPage},
 ]
 

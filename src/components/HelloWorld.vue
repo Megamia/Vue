@@ -24,22 +24,22 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .hello {
   display: flex;
   flex-direction: row;
   flex: 1;
-  padding-inline: 30px;
-  padding-block: 20px;
+  background-color: #ffffff;
+
 }
 .SiderBar {
   display: flex;
+
 }
 .main {
   display: flex;
 flex:1;
   flex-direction: column;
-  padding-inline-start: 20px;
 }
 /* .main-content{
 } */

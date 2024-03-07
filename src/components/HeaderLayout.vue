@@ -31,11 +31,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .mainheader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-inline: 50px;
+  padding-top: 20px;
+  background-color: #f5f5f5;
 }
 .user {
   display: flex;
