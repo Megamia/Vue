@@ -3,13 +3,13 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from "vue-router";
 import DashBoard from './pages/DashBoard';
 import AboutPage from './pages/AboutPage';
-import SiderBar from './components/SiderBar.vue';
-
+import UsersPage from './pages/UsersPage.vue'
 
 const routes = [
-    {path: '/',component: SiderBar},
+    {path: '/',component: App},
     {path: '/DashBoard',component: DashBoard},
     {path: '/AboutPage',component: AboutPage},
+    {path: '/UsersPage',component: UsersPage},
 ]
 
 

@@ -40,6 +40,7 @@ export default {
   display: flex;
 flex:1;
   flex-direction: column;
+  height: max-content;
 }
 /* .main-content{
 } */

@@ -25,7 +25,7 @@
         >
       </span>
       <span class="list">
-        <router-link to="/AboutPage" class="link">
+        <router-link to="/UsersPage" class="link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -125,18 +125,18 @@
 export default {
   name: "SiderBar",
 };
-
 </script>
 
 <style scoped>
 .sidebar {
-  width: 200px;
-  margin-top: 20px;
-  margin-left: 30px;
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 40px;
 }
 .logo {
   font-weight: bold;
   margin-bottom: 50px;
+  font-size: 30px
 }
 .page {
   display: flex;
@@ -145,6 +145,7 @@ export default {
 .page span {
   display: flex;
   flex: 1;
+  font-size: 25px;
 }
 .page span a {
   display: flex;
@@ -153,7 +154,6 @@ export default {
   color: #757575;
   fill: #757575;
   align-items: center;
-  margin-block: 20px;
 }
 .page span svg {
   margin-right: 10px;
@@ -170,7 +170,7 @@ export default {
 
 .page span a:active,
 .page span a:focus {
-  border-right: 2px solid #0d99ff;
+  border-right: 3px solid #0d99ff;
   color: #0d99ff;
   font-weight: bold;
 }
@@ -203,10 +203,11 @@ export default {
 .list a {
   display: flex;
   flex-direction: row;
+  padding-block: 20px;
 }
 
 .icon {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
 }
 </style>

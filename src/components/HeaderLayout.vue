@@ -37,7 +37,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   padding-inline: 50px;
-  padding-top: 20px;
+  padding-top: 50px;
   background-color: #f5f5f5;
 }
 .user {
@@ -46,10 +46,11 @@ export default {
 }
 .hi{
   font-weight: bold;
+  font-size: 30px;
 }
 .wishing {
   color: gray;
-  font-size: 10px;
+  font-size: 20px;
   margin-top: 5px;
 }
 .right{
@@ -73,8 +74,8 @@ export default {
   justify-content: center;
 }
 .icon{
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
 }
 .settinguser{
   display: flex;
