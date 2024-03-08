@@ -5,8 +5,8 @@
     </div>
     <div class="page page1">
       <span class="list">
-        <router-link to="/DashBoard"
-          ><svg
+        <router-link to="/DashBoard" class="link">
+          <svg
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@
         >
       </span>
       <span class="list">
-        <router-link to="/AboutPage"
-          ><svg
+        <router-link to="/AboutPage" class="link">
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
             class="icon"
@@ -38,8 +38,8 @@
         >
       </span>
       <span class="list">
-        <router-link to="/Dashboard"
-          ><svg
+        <router-link to="/Dashboard" class="link">
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 384 512"
             class="icon"
@@ -51,8 +51,8 @@
         >
       </span>
       <span class="list">
-        <router-link to="/AboutPage"
-          ><svg
+        <router-link to="/AboutPage" class="link">
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
             class="icon"
@@ -64,8 +64,8 @@
         >
       </span>
       <span class="list">
-        <router-link to="/Dashboard"
-          ><svg
+        <router-link to="/Dashboard" class="link">
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
             class="icon"
@@ -79,8 +79,8 @@
     </div>
     <div class="page page2">
       <span class="list">
-        <router-link to="/AboutPage"
-          ><svg
+        <router-link to="/AboutPage" class="link">
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
             class="icon"
@@ -92,8 +92,8 @@
         >
       </span>
       <span class="list">
-        <router-link to="/Dashboard"
-          ><svg
+        <router-link to="/Dashboard" class="link">
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
             class="icon"
@@ -105,7 +105,7 @@
         >
       </span>
       <span class="list">
-        <router-link to="/AboutPage">
+        <router-link to="/AboutPage" class="link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -124,8 +124,8 @@
 <script>
 export default {
   name: "SiderBar",
-  components: {},
 };
+
 </script>
 
 <style scoped>
@@ -169,12 +169,16 @@ export default {
 } */
 
 .page span a:active,
-.page span a:focus,
-.page span:focus {
+.page span a:focus {
   border-right: 2px solid #0d99ff;
   color: #0d99ff;
   font-weight: bold;
+}
+
+.link:active svg,
+.link:focus svg {
   fill: #0d99ff;
+  font-weight: bold;
 }
 /* .page span :active svg path,
 .page span :focus svg path {
