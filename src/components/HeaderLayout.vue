@@ -96,6 +96,7 @@ height: 40px;
 }
 .name{
   font-weight: 600;
+  margin-bottom: 5px;
 }
 .permission{
   font-size: 15px;

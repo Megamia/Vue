@@ -38,7 +38,7 @@
         >
       </span>
       <span class="list">
-        <router-link to="/Dashboard" class="link">
+        <router-link to="/DocumentPage" class="link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 384 512"
