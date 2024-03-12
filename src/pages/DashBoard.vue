@@ -1,4 +1,5 @@
 <template>
+  <HeaderLayout/>
   <div class="main">
     <div class="Users Dashboard">
       <div class="title">
@@ -336,8 +337,12 @@
 </template>
 
 <script>
+import HeaderLayout from '@/components/HeaderLayout.vue';
 export default {
   name: "DashBoard",
+  components:{
+    HeaderLayout,
+  }
 };
 </script>
 
