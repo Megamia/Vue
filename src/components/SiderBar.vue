@@ -64,7 +64,7 @@
         >
       </span>
       <span class="list">
-        <router-link to="/Dashboard" class="link">
+        <router-link to="/TestPage" class="link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
@@ -79,7 +79,7 @@
     </div>
     <div class="page page2">
       <span class="list">
-        <router-link to="/AboutPage" class="link">
+        <router-link to="/DashBoardTest" class="link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"

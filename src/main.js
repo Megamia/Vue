@@ -5,6 +5,8 @@ import DashBoard from './pages/DashBoard';
 import AboutPage from './pages/AboutPage';
 import UsersPage from './pages/UsersPage.vue';
 import DocumentPage from './pages/DocumentPage.vue';
+import TestPage from './pages/Test/TestPage.vue';
+import DashBoardTest from './pages/DashBoardTest.vue';
 
 const routes = [
     {path: '/App',component: App},
@@ -12,6 +14,9 @@ const routes = [
     {path: '/AboutPage',component: AboutPage},
     {path: '/UsersPage',component: UsersPage},
     {path: '/DocumentPage',component: DocumentPage},
+    {path: '/TestPage',component: TestPage},
+    {path: '/DashBoardTest',component: DashBoardTest},
+
 ]
 
 
