@@ -72,23 +72,29 @@
         </div>
         <div class="details"></div>
       </div>
-      <template v-for="nameuser in users" :key="nameuser.Name">
+      <template v-for="user in users" :key="user.Name">
         <div class="details">
           <div class="detail detailshare">
             <div class="namenrole name">
               <div class="user name">
-                <span class="nameuser"> {{ nameuser.Name }} </span>
-                <span class="email"> {{ nameuser.Email }} </span>
+                <span class="nameuser"> {{ user.Name }} </span>
+                <span class="email"> {{ user.Email }} </span>
+              </div>
+              <div
+                class="buttonper employee"
+                v-if="user.Permission == 'Employee'"
+              >
+                <span> {{ user.Permission }} </span>
+              </div>
+              <div class="buttonper" v-else>
+                <span> {{ user.Permission }} </span>
               </div>
             </div>
-            <div class="buttonper employee">
-              <span> Employee </span>
-            </div>
             <div class="time createdate">
-              <span> 21 Jun, 2020 </span>
+              <span> {{ user.CreateDate }} </span>
             </div>
             <div class="namerole role">
-              <span>Lorem Ipsum </span>
+              <span> {{ user.Role }} </span>
             </div>
             <div class="actions action">
               <svg
@@ -132,42 +138,49 @@ export default {
           Email: "david_wagner@example.com",
           CreateDate: "24 Otc, 2015",
           Role: "Lorem Ipsum",
+          Permission: "Super Admin",
         },
         {
           Name: "Ina Hogan",
           Email: "windler.warren@runte.net",
           CreateDate: "24 Otc, 2015",
           Role: "Lorem Ipsum",
+          Permission: "Admin",
         },
         {
           Name: "Devin Harmon",
           Email: "wintheiser_enos@yahoo.com",
           CreateDate: "18 Dec, 2015",
           Role: "Lorem Ipsum",
+          Permission: "HR Admin",
         },
         {
           Name: "Lena Page",
           Email: "camila_ledner@gmail.com",
           CreateDate: "8 Otc, 2016",
           Role: "Lorem Ipsum",
+          Permission: "Employee",
         },
         {
           Name: "Eula Horton",
           Email: "edula_dorton1221@gmail.com",
           CreateDate: "15 Jun, 2017",
           Role: "Lorem Ipsum",
+          Permission: "Super Admin",
         },
         {
           Name: "Victoria Perez",
           Email: "terrill.wiza@hotmail.com",
           CreateDate: "12 Jan, 2019",
           Role: "Lorem Ipsum",
+          Permission: "HR Admin",
         },
         {
           Name: "Cora Medina",
           Email: "hagenes.isai@hotmail.com",
           CreateDate: "21 July, 2020",
           Role: "Lorem Ipsum",
+          Permission: "Employee",
         },
       ],
     };
@@ -329,7 +342,7 @@ export default {
 }
 .namenrole {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: #8f9bb3;
 }
 </style>
