@@ -5,16 +5,37 @@
     </div>
     <div class="main">
       <router-view />
+      <PaginationLayout
+        class="pagination"
+        @update-selected-option="updateSelectedOption"
+      />
     </div>
+    <button @click="Show">Show</button>
   </div>
 </template>
 
 <script>
 import SiderBar from "./SiderBar.vue";
+import PaginationLayout from "./PaginationLayout.vue";
 export default {
   name: "HelloWorld",
   components: {
     SiderBar,
+    PaginationLayout,
+  },
+  prop: {
+    selectedOption: {
+      type: Number,
+      required: true,
+    },
+  },
+  methods: {
+    updateSelectedOption(option) {
+      this.selectedOption = option;
+    },
+    Show() {
+      alert("SelectOption: ", this.selectedOption);
+    },
   },
 };
 </script>
@@ -33,7 +54,14 @@ export default {
   display: flex;
   flex: 1;
   flex-direction: column;
-  height: max-content;
+  background-color: #f5f5f5;
+}
+.pagination {
+  /* position: relative; */
+  bottom: 30px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
 }
 /* .main-content{
 } */
