@@ -6,8 +6,8 @@
         {{ option.value }}
       </option>
     </select>
-    <p>Giá trị được chọn: {{ selectedOptionText }}</p>
-    <p>{{ selectedOption }} of {{ options.length }}</p>
+    <!-- <p>Giá trị được chọn: {{ selectedOptionText }}</p> -->
+    <p>{{ selectedValue }} of {{ options.length }}</p>
     <div class="btn">
       <button class="btn prev" @click="del" :disabled="selectedOption <= 1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon">
@@ -66,12 +66,20 @@ export default {
     },
     showalert() {
       alert("Lựa chọn: " + this.selectedOptionText);
-      this.$emit("selected-option-updated", this.selectedOptionText);
+      this.$emit("update-selected-option", this.selectedOptionText);
     },
+
     onSelectedOptionUpdated(selectedOptionText) {
       this.selectedOptionText = selectedOptionText;
     },
+    handleSelectedOptionUpdated(value) {
+      this.selectedOptionText = value;
+    },
+    handleSelectedOptionChange() {
+      this.$emit("selected-option-updated", this.selectedOptionTextIm);
+    },
   },
+
   computed: {
     selectedOptionText() {
       const option = this.options.find((option) => option.id === this.selectedValue);

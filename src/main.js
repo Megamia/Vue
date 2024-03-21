@@ -8,7 +8,8 @@ import DocumentPage from './pages/DocumentPage.vue';
 import TestPage from './pages/Test/TestPage.vue';
 import PaginationLayout from './components/PaginationLayout.vue';
 import HierarchyPage from './pages/HierarchyPage.vue';
-
+import TestModal from './pages/Test/TestModal.vue';
+import AddModal from './pages/Test/AddModal.vue';
 const routes = [
     {path: '/App',component: App},
     {path: '/DashBoard',component: DashBoard},
@@ -18,6 +19,8 @@ const routes = [
     {path: '/TestPage',component: TestPage},
     {path: '/PaginationLayout',component: PaginationLayout},
     {path: '/HierarchyPage',component: HierarchyPage},
+    {path: '/TestModal',component: TestModal},
+    {path: '/AddModal',component: AddModal},
 
 ]
 
