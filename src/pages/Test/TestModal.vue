@@ -1,50 +1,258 @@
 <template>
-  <div class="body">
-    <div class="main"></div>
-    <div class="content">
-      <span>Custom header </span>
-      <!-- <button id="show-modal" @click="showModal = true">
-        </button> -->
-      <button class="modal-default-button" @click="$emit('close')">OK</button>
-    </div>
+  <div class="root">
+    <button @click="isOpen = true">Open</button>
+    <Teleport to="body">
+      <div class="modal" v-if="isOpen">
+        <div class="main">
+          <div class="about">
+            <div class="title">
+              <span>Add User</span>
+              <button class="modal-default-button" @click="isOpen = false">X</button>
+            </div>
+            <div class="infor">
+              <div class="userid">
+                <input type="text" placeholder="User ID *" class="useridinput input" />
+              </div>
+              <div class="name">
+                <div class="firstname">
+                  <input type="text" placeholder="First Name *" class="nameinput input" />
+                </div>
+                <div class="lastname">
+                  <input type="text" placeholder="Last Name *" class="nameinput input" />
+                </div>
+              </div>
+              <div class="detail">
+                <div class="detailup">
+                  <input type="text" placeholder="Email ID *" class="nameinput input" />
+                  <input type="text" placeholder="Mobile No" class="nameinput input" />
+                  <select v-model="selected" class="nameinput input">
+                    <option disabled value="">Please select one</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                  </select>
+                </div>
+                <div class="detaildown">
+                  <input type="text" placeholder="Username *" class="nameinput input" />
+                  <input type="text" placeholder="Password*" class="nameinput input" />
+                  <input
+                    type="text"
+                    placeholder="Confirm Password*"
+                    class="nameinput input"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="permission">
+              <div class="titleper">
+                <div class="moduleper">
+                  <span>Module Permission</span>
+                </div>
+                <div class="percheck">
+                  <div class="read">
+                    <span>Read</span>
+                  </div>
+                  <div class="write">
+                    <span>Write</span>
+                  </div>
+                  <div class="delete">
+                    <span>Delete</span>
+                  </div>
+                </div>
+              </div>
+              <div class="checkbox" v-for="option in options" :key="option.name">
+                <label class="moduleper">{{ option.name }}</label>
+                <div class="percheck">
+                  <div class="read">
+                    <input type="checkbox" value="read" id="read" />
+                  </div>
+                  <div class="write">
+                    <input type="checkbox" value="write" id="write" />
+                  </div>
+                  <div class="delete">
+                    <input type="checkbox" value="delete" id="delete" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <div class="bothbutton">
+                <button class="buttonadd">Add User</button>
+                <button @click="isOpen = false" class="buttoncancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
+<script setup>
+import { ref } from "vue";
+const isOpen = ref(false);
+const options = [
+  { name: "Super Admin", permissions: ["read", "write", "delete"] },
+  { name: "Admin", permissions: ["read", "write", "delete"] },
+  { name: "Employee", permissions: ["read", "write", "delete"] },
+  { name: "Lorem Ipsum", permissions: ["read", "write", "delete"] },
+];
+</script>
 <style scoped>
-.body {
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex: 1;
   justify-content: center;
-  align-items: center;
-  background-color: gray;
+  /* align-items: center; */
+}
+.modal > div {
+  background-color: #fff;
+  /* padding: 50px; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 200px;
+  margin-block: 100px;
 }
 .main {
   display: flex;
   flex: 1;
-  background-color: blue;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  opacity: 0.6;
+  /* background-color: #9da0a9; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* opacity: 0.5; */
+
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.about {
   /* position: absolute; */
-}
-.content {
-  position: absolute;
-  background-color: red;
-  padding: 50px;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
   flex: 1;
-  height: max-content;
+  flex-direction: column;
+  /* height: 700px; */
+  width: 95%;
+  /* justify-content: center; */
+  /* right: 50%; */
+  align-self: center;
+  background-color: #fff;
+  margin: 50px;
 }
-.content button {
-  padding: 10px;
-  font-size: 30px;
-  font-weight: bold;
+.title {
+  display: flex;
+  /* flex: 1; */
+  flex-direction: row;
+  justify-content: space-between;
 }
-.main span {
-  color: black;
-  font-size: 30px;
+.input {
+  padding: 20px;
+}
+.userid {
+  display: flex;
+  flex: 1;
+}
+.useridinput {
+  display: flex;
+  flex: 1;
+}
+.name {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.nameinput {
+  display: flex;
+  flex: 1;
+}
+.firstname,
+.lastname {
+  display: flex;
+  flex: 1;
+}
+.detail {
+  display: flex;
+  /* flex: 1; */
+  flex-direction: column;
+}
+.detailup {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.detaildown {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.permission {
+  margin-top: 30px;
+}
+.titleper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #eff4fa;
+}
+.moduleper {
+  display: flex;
+  width: 50%;
+}
+.percheck {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.read {
+  display: flex;
+  width: calc(100% / 3);
+  justify-self: start;
+}
+.write {
+  display: flex;
+  width: calc(100% / 3);
+}
+.delete {
+  display: flex;
+  width: calc(100% / 3);
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+.button {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: end;
+}
+.bothbutton {
+  display: flex;
+  /* flex: 1; */
+  gap: 20px;
+}
+.buttonadd {
+  color: white;
+  background-color: #0095ff;
+  border-width: 0;
+  border-radius: 10px;
+  padding-block: 7px;
+  padding-inline: 20px;
+  width: 120px;
+}
+.buttoncancel {
+  color: #8f9bb3;
+  border-width: 0;
+  background-color: #fff;
+  padding-block: 7px;
+  padding-inline: 20px;
+  width: 120px;
 }
 </style>

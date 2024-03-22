@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-    <div class="opa"></div>
     <div class="about">
       <div class="title">
         <span>Add User</span>
@@ -51,65 +50,68 @@
             <span>Delete</span>
           </div>
         </div>
-        <!-- <div class="detailper">
-        <v-checkbox label="Checkbox"></v-checkbox>
-      </div> -->
+        <div class="checkbox">
+          <label class="moduleper">Spuer Admin</label>
+          <div class="read">
+            <input type="checkbox" value="read" id="read" />
+          </div>
+          <div class="write">
+            <input type="checkbox" value="write" id="write" />
+          </div>
+          <div class="delete">
+            <input type="checkbox" value="delete" id="delete" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      roles: [
-        { role_id: 10, name: "foo" },
-        { role_id: 20, name: "bar" },
-        { role_id: 30, name: "baz" },
-      ],
-      user: {
-        user_id: 100,
-        name: "Demo User",
-        roles: [
-          { role_id: 10, enabled: true },
-          { role_id: 20, enabled: false },
-          { role_id: 30, enabled: false },
-        ],
-      },
-    };
-  },
-};
+export default {};
 </script>
 
 <style scoped>
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.modal > div {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 200px;
+  margin-block: 100px;
+}
 .main {
   display: flex;
   flex: 1;
   /* background-color: #9da0a9; */
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   /* opacity: 0.5; */
 
   /* justify-content: center; */
   /* align-items: center; */
 }
-.opa {
-  display: flex;
-  flex: 1;
-  background-color: #9da0a9;
-  opacity: 0.5;
-  position: relative;
-  height: 100vh;
-  width: 100%;
-}
+
 .about {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex: 1;
   flex-direction: column;
-  width: 80%;
-  justify-content: center;
+  /* height: 700px; */
+  width: 100%;
+  /* justify-content: center; */
   /* right: 50%; */
   align-self: center;
   background-color: #fff;
@@ -164,6 +166,8 @@ export default {
   display: flex;
   flex: 1;
   flex-direction: row;
+  padding: 20px;
+  background-color: #eff4fa;
 }
 .moduleper {
   display: flex;
@@ -172,6 +176,7 @@ export default {
 .read {
   display: flex;
   width: 20%;
+  justify-self: start;
 }
 .write {
   display: flex;
@@ -180,5 +185,10 @@ export default {
 .delete {
   display: flex;
   width: 20%;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
 }
 </style>

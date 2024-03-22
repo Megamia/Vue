@@ -97,7 +97,6 @@ export default {
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: #f5f5f5;
 }
 .pagination {
   /* position: relative; */
