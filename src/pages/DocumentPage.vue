@@ -11,11 +11,7 @@
           <div class="sort">
             <span>
               Sort by
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                class="icon2"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon2">
                 <path
                   d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                 />
@@ -23,11 +19,7 @@
             </span>
           </div>
           <div class="filter">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              class="icon"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon">
               <path
                 d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"
               />
@@ -89,11 +81,7 @@
           <div class="monthchoose btcdetail">
             <span
               >This Month
-              <svg
-                viewBox="0 0 13 8"
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon2"
-              >
+              <svg viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg" class="icon2">
                 <path
                   d="M1.47738 0.300601L6.07214 4.88584L10.6574 0.291085L12.0688 1.70962L6.07507 7.71584L0.0688549 1.72206L1.47738 0.300601Z"
                 />
@@ -103,11 +91,7 @@
           <div class="documentschoose btcdetail">
             <span
               >Documents
-              <svg
-                viewBox="0 0 13 8"
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon2"
-              >
+              <svg viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg" class="icon2">
                 <path
                   d="M1.47738 0.300601L6.07214 4.88584L10.6574 0.291085L12.0688 1.70962L6.07507 7.71584L0.0688549 1.72206L1.47738 0.300601Z"
                 />
@@ -153,17 +137,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -205,17 +185,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -257,17 +233,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -309,17 +281,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -361,17 +329,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -413,17 +377,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -465,17 +425,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -517,17 +473,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -569,17 +521,13 @@
             </div>
             <div class="intro">
               <span
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.
               </span>
             </div>
             <div class="action">
               <div class="iconaction">
-                <svg
-                  viewBox="0 0 17 17"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                >
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="icon">
                   <path
                     d="M11.9972 0.752602L2.74463 10.0052L0.760742 16.2391L6.99463 14.2552L16.2472 5.0026C16.2472 5.0026 16.1764 3.51439 14.8306 2.16927C13.4847 0.823435 11.9972 0.752602 11.9972 0.752602ZM12.2629 1.90364C13.0222 2.04814 13.6267 2.3698 14.0932 2.84855C14.5596 3.32729 14.8879 3.96312 15.0962 4.73698L13.8123 6.02083L10.979 3.1875L11.9972 2.16927L12.2629 1.90364ZM3.52629 10.7149C3.53466 10.717 4.37801 10.9303 5.2238 11.776C6.14463 12.626 6.2863 13.4058 6.2863 13.4058L6.31673 13.4417L3.80298 14.2511L2.74325 13.1913L3.52629 10.7149Z"
                     fill="#4A85F6"
@@ -743,7 +691,7 @@ export default {
 }
 .intro {
   width: 32%;
-  color: #464E5F66;
+  color: #464e5f66;
 }
 .listdetails {
   display: flex;
@@ -768,7 +716,7 @@ export default {
 .titlelist {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #EDF2F6;
+  border-bottom: 1px solid #edf2f6;
   padding-inline: 30px;
   padding-block-end: 30px;
 }
@@ -782,9 +730,9 @@ export default {
 }
 .details {
   display: flex;
-  flex:1;
+  flex: 1;
   align-items: center;
-  border-bottom: 1px solid #EDF2F6;
+  border-bottom: 1px solid #edf2f6;
   padding-block: 15px;
   padding-inline-start: 70px;
 }
@@ -802,7 +750,7 @@ export default {
 }
 .iconaction {
   padding: 10px;
-  border: 1px solid #DDDFE1;
+  border: 1px solid #dddfe1;
   border-radius: 5px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <button @click="isOpen = true">Open</button>
+    <button @click="isOpen = true" class="buttonadduser">Add user +</button>
     <Teleport to="body">
       <div class="modal" v-if="isOpen">
         <div class="main">
@@ -25,11 +25,11 @@
                 <div class="detailup">
                   <input type="text" placeholder="Email ID *" class="nameinput input" />
                   <input type="text" placeholder="Mobile No" class="nameinput input" />
-                  <select v-model="selected" class="nameinput input">
+                  <select v-model="selected" value="" class="nameinput input">
                     <option disabled value="">Please select one</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
                   </select>
                 </div>
                 <div class="detaildown">
@@ -105,7 +105,7 @@ const options = [
   left: 0;
   background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: 100%;
+  height: 115.5%;
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -117,7 +117,7 @@ const options = [
   display: flex;
   flex-direction: column;
   margin-inline: 200px;
-  margin-block: 100px;
+  margin-block: 150px;
 }
 .main {
   display: flex;
@@ -138,9 +138,9 @@ const options = [
   flex-direction: column;
   /* height: 700px; */
   width: 95%;
-  /* justify-content: center; */
+  justify-content: center;
   /* right: 50%; */
-  align-self: center;
+  /* align-self: center; */
   background-color: #fff;
   margin: 50px;
 }
@@ -150,9 +150,11 @@ const options = [
   flex-direction: row;
   justify-content: space-between;
 }
+
 .input {
   padding: 20px;
 }
+
 .userid {
   display: flex;
   flex: 1;
@@ -227,9 +229,10 @@ const options = [
   flex-direction: row;
   padding: 20px;
 }
+
 .button {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   align-items: center;
   justify-content: end;
 }
@@ -246,6 +249,24 @@ const options = [
   padding-block: 7px;
   padding-inline: 20px;
   width: 120px;
+}
+.buttonadduser {
+  background-color: #4a85f6;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-width: 0;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 500;
+}
+.modal-default-button,
+.buttonadd,
+.buttoncancel {
+  cursor: pointer;
 }
 .buttoncancel {
   color: #8f9bb3;
