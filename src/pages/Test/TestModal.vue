@@ -137,18 +137,22 @@ const options = [
   flex: 1;
   flex-direction: column;
   /* height: 700px; */
-  width: 95%;
+  width: 93%;
   justify-content: center;
   /* right: 50%; */
   /* align-self: center; */
   background-color: #fff;
   margin: 50px;
+  font-size: 20px;
 }
 .title {
   display: flex;
   /* flex: 1; */
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 30px;
+  margin-inline: -15px;
+  font-weight: bold;
 }
 
 .input {
@@ -235,6 +239,7 @@ const options = [
   /* flex: 1; */
   align-items: center;
   justify-content: end;
+  margin-top: 30px;
 }
 .bothbutton {
   display: flex;

@@ -195,6 +195,7 @@ export default {
   width: 20px;
   height: 20px;
   fill: #c5cee0;
+  cursor: pointer;
 }
 .button {
   background-color: #4a85f6;
@@ -203,6 +204,7 @@ export default {
   border-radius: 7px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .button span {
   color: white;
