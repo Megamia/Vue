@@ -239,7 +239,7 @@ const options = [
   /* flex: 1; */
   align-items: center;
   justify-content: end;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .bothbutton {
   display: flex;
