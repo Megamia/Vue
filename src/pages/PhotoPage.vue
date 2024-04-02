@@ -1,17 +1,23 @@
 <template>
-  <div class="photo">
-    <span>PhotoPage </span>
-    <button @click="goAboutPage">Go AboutPage</button>
+  <div>
+    <template v-for="user in users" :key="user.Name">
+      <div class="photo">
+        <span>{{ user.Name }}</span>
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
+import { store } from "@/store/store";
+
 export default {
   name: "PhotoPage",
-  methods: {
-    goAboutPage() {
-      this.$router.push("/HierarchyPage");
-    },
+  setup() {
+    const users = ref(store.state.DataDashBoard.users);
+
+    return { users };
   },
 };
 </script>
@@ -20,6 +26,7 @@ export default {
 .photo {
   height: 300px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: black;

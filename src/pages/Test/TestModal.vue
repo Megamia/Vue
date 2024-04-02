@@ -1,102 +1,131 @@
 <template>
   <div class="root">
     <button @click="isOpen = true" class="buttonadduser">Add user +</button>
-    <Teleport to="body">
-      <div class="modal" v-if="isOpen">
-        <div class="main">
-          <div class="about">
-            <div class="title">
-              <span>Add User</span>
-              <button class="modal-default-button" @click="isOpen = false">X</button>
-            </div>
-            <div class="infor">
-              <div class="userid">
-                <input type="text" placeholder="User ID *" class="useridinput input" />
+    <template v-for="user in users" :key="user.Name">
+      <Teleport to="body">
+        <div class="modal" v-if="isOpen">
+          <div class="main">
+            <div class="about">
+              <div class="title">
+                <span>Add User</span>
+                <button class="modal-default-button" @click="isOpen = false">X</button>
               </div>
-              <div class="name">
-                <div class="firstname">
-                  <input type="text" placeholder="First Name *" class="nameinput input" />
+              <div class="infor">
+                <div class="userid">
+                  <input type="text" placeholder="User ID *" class="useridinput input" />
                 </div>
-                <div class="lastname">
-                  <input type="text" placeholder="Last Name *" class="nameinput input" />
-                </div>
-              </div>
-              <div class="detail">
-                <div class="detailup">
-                  <input type="text" placeholder="Email ID *" class="nameinput input" />
-                  <input type="text" placeholder="Mobile No" class="nameinput input" />
-                  <select v-model="selected" value="" class="nameinput input">
-                    <option disabled value="">Please select one</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                  </select>
-                </div>
-                <div class="detaildown">
-                  <input type="text" placeholder="Username *" class="nameinput input" />
-                  <input type="text" placeholder="Password*" class="nameinput input" />
-                  <input
-                    type="text"
-                    placeholder="Confirm Password*"
-                    class="nameinput input"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="permission">
-              <div class="titleper">
-                <div class="moduleper">
-                  <span>Module Permission</span>
-                </div>
-                <div class="percheck">
-                  <div class="read">
-                    <span>Read</span>
+                <div class="name">
+                  <div class="firstname">
+                    <input
+                      type="text"
+                      v-model="name"
+                      placeholder="First Name *"
+                      class="nameinput input"
+                    />
                   </div>
-                  <div class="write">
-                    <span>Write</span>
+                  <div class="lastname">
+                    <input
+                      type="text"
+                      v-model="per"
+                      placeholder="Last Name *"
+                      class="nameinput input"
+                    />
                   </div>
-                  <div class="delete">
-                    <span>Delete</span>
+                </div>
+                <div class="detail">
+                  <div class="detailup">
+                    <input type="text" placeholder="Email ID *" class="nameinput input" />
+                    <input type="text" placeholder="Mobile No" class="nameinput input" />
+                    <select v-model="selected" value="" class="nameinput input">
+                      <option disabled value="">Please select one</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                    </select>
+                  </div>
+                  <div class="detaildown">
+                    <input type="text" placeholder="Username *" class="nameinput input" />
+                    <input type="text" placeholder="Password*" class="nameinput input" />
+                    <input
+                      type="text"
+                      placeholder="Confirm Password*"
+                      class="nameinput input"
+                    />
                   </div>
                 </div>
               </div>
-              <div class="checkbox" v-for="option in options" :key="option.name">
-                <label class="moduleper">{{ option.name }}</label>
-                <div class="percheck">
-                  <div class="read">
-                    <input type="checkbox" value="read" id="read" />
+              <div class="permission">
+                <div class="titleper">
+                  <div class="moduleper">
+                    <span>Module Permission</span>
                   </div>
-                  <div class="write">
-                    <input type="checkbox" value="write" id="write" />
+                  <div class="percheck">
+                    <div class="read">
+                      <span>Read</span>
+                    </div>
+                    <div class="write">
+                      <span>Write</span>
+                    </div>
+                    <div class="delete">
+                      <span>Delete</span>
+                    </div>
                   </div>
-                  <div class="delete">
-                    <input type="checkbox" value="delete" id="delete" />
+                </div>
+                <div class="checkbox" v-for="option in options" :key="option.name">
+                  <label class="moduleper">{{ option.name }}</label>
+                  <div class="percheck">
+                    <div class="read">
+                      <input type="checkbox" value="read" id="read" />
+                    </div>
+                    <div class="write">
+                      <input type="checkbox" value="write" id="write" />
+                    </div>
+                    <div class="delete">
+                      <input type="checkbox" value="delete" id="delete" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="button">
-              <div class="bothbutton">
-                <button class="buttonadd">Add User</button>
-                <button @click="isOpen = false" class="buttoncancel">Cancel</button>
+              <div class="button">
+                <div class="bothbutton">
+                  <button @click="addUser(user), (isOpen = false)" class="buttonadd">
+                    Add User
+                  </button>
+                  <button @click="isOpen = false" class="buttoncancel">Cancel</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </Teleport>
+      </Teleport>
+    </template>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 const isOpen = ref(false);
+import { useStore } from "vuex";
+
+const store = useStore();
+const users = ref(store.state.DataDashBoard.users);
 const options = [
   { name: "Super Admin", permissions: ["read", "write", "delete"] },
   { name: "Admin", permissions: ["read", "write", "delete"] },
   { name: "Employee", permissions: ["read", "write", "delete"] },
   { name: "Lorem Ipsum", permissions: ["read", "write", "delete"] },
 ];
+const name = ref("");
+const per = ref("");
+
+const addUser = () => {
+  users.value.push({
+    id: users.value.length + 1,
+    name: name.value,
+    permission: per.value,
+  });
+  alert("Thêm " + name.value + ", " + per.value + " thành công!");
+};
 </script>
 <style scoped>
 .modal {

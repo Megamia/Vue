@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { useStore } from "vuex";
+import { computed } from "vue";
 export default {
   data() {
     return {
@@ -26,13 +28,12 @@ export default {
       alert("Đã thêm " + this.newus + " thành công!");
     },
   },
-  computed: {
-    result() {
-      return this.$store.state.result;
-    },
-    users() {
-      return this.$store.state.users;
-    },
+  setup() {
+    const store = useStore();
+    const result = computed(() => store.state.result);
+    const users = computed(() => store.state.DataDashBoard.users);
+
+    return { result, users };
   },
 };
 </script>
