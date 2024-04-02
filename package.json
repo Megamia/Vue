@@ -12,13 +12,14 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@vue/devtools-api": "^6.6.1",
     "core-js": "^3.8.3",
     "usemodal-vue3": "^0.3.7",
     "vue": "^3.4.21",
     "vue-multiselect": "^2.1.9",
     "vue-router": "^4.3.0",
-    "vue-tailwind": "^2.5.1",
-    "vuetify": "^3.5.10"
+    "vuetify": "^3.5.10",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

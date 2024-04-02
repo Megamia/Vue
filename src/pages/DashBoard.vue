@@ -112,69 +112,17 @@
 import HeaderLayout from "@/components/HeaderLayout.vue";
 import TestModal from "./Test/TestModal.vue";
 import { ref } from "vue";
+import { useStore } from "vuex";
+
 const isOpen = ref(true);
 
-const users = ref([
-  {
-    Name: "David Wagner",
-    Email: "david_wagner@example.com",
-    CreateDate: "24 Otc, 2015",
-    Role: "Lorem Ipsum",
-    Permission: "Super Admin",
-  },
-  {
-    Name: "Ina Hogan",
-    Email: "windler.warren@runte.net",
-    CreateDate: "24 Otc, 2015",
-    Role: "Lorem Ipsum",
-    Permission: "Admin",
-  },
-  {
-    Name: "Devin Harmon",
-    Email: "wintheiser_enos@yahoo.com",
-    CreateDate: "18 Dec, 2015",
-    Role: "Lorem Ipsum",
-    Permission: "HR Admin",
-  },
-  {
-    Name: "Lena Page",
-    Email: "camila_ledner@gmail.com",
-    CreateDate: "8 Otc, 2016",
-    Role: "Lorem Ipsum",
-    Permission: "Employee",
-  },
-  {
-    Name: "Eula Horton",
-    Email: "edula_dorton1221@gmail.com",
-    CreateDate: "15 Jun, 2017",
-    Role: "Lorem Ipsum",
-    Permission: "Super Admin",
-  },
-  {
-    Name: "Victoria Perez",
-    Email: "terrill.wiza@hotmail.com",
-    CreateDate: "12 Jan, 2019",
-    Role: "Lorem Ipsum",
-    Permission: "HR Admin",
-  },
-  {
-    Name: "Cora Medina",
-    Email: "hagenes.isai@hotmail.com",
-    CreateDate: "21 July, 2020",
-    Role: "Lorem Ipsum",
-    Permission: "Employee",
-  },
-]);
-// const deleteUser = (user) => {
-//   this.users.splice(this.users.indexOf(user), 1);
-// };
+const store = useStore();
+const users = ref(store.state.DataDashBoard.users);
+
 const deleteuser = (user) => {
   users.value.splice(users.value.indexOf(user), 1);
   alert("Xóa " + user.Name + " thành công!");
 };
-// const deleteUser = () => {
-//   alert("Chưa xóa được");
-// };
 </script>
 
 <style scoped>
