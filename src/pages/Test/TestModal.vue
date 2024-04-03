@@ -18,7 +18,7 @@
                   <div class="firstname">
                     <input
                       type="text"
-                      v-model="name"
+                      v-model="firstname"
                       placeholder="First Name *"
                       class="nameinput input"
                     />
@@ -26,7 +26,7 @@
                   <div class="lastname">
                     <input
                       type="text"
-                      v-model="per"
+                      v-model="lastname"
                       placeholder="Last Name *"
                       class="nameinput input"
                     />
@@ -34,8 +34,18 @@
                 </div>
                 <div class="detail">
                   <div class="detailup">
-                    <input type="text" placeholder="Email ID *" class="nameinput input" />
-                    <input type="text" placeholder="Mobile No" class="nameinput input" />
+                    <input
+                      type="text"
+                      v-model="email"
+                      placeholder="Email ID *"
+                      class="nameinput input"
+                    />
+                    <input
+                      type="text"
+                      v-model="per"
+                      placeholder="Mobile No"
+                      class="nameinput input"
+                    />
                     <select v-model="selected" value="" class="nameinput input">
                       <option disabled value="">Please select one</option>
                       <option value="A">A</option>
@@ -75,13 +85,13 @@
                   <label class="moduleper">{{ option.name }}</label>
                   <div class="percheck">
                     <div class="read">
-                      <input type="checkbox" value="read" id="read" />
+                      <input type="checkbox" v-model="read" value="read" id="read" />
                     </div>
                     <div class="write">
-                      <input type="checkbox" value="write" id="write" />
+                      <input type="checkbox" v-model="write" value="write" id="write" />
                     </div>
                     <div class="delete">
-                      <input type="checkbox" value="delete" id="delete" />
+                      <input type="checkbox" v-model="del" value="delete" id="delete" />
                     </div>
                   </div>
                 </div>
@@ -115,16 +125,31 @@ const options = [
   { name: "Employee", permissions: ["read", "write", "delete"] },
   { name: "Lorem Ipsum", permissions: ["read", "write", "delete"] },
 ];
-const name = ref("");
+
+// const name = ref("");
+const firstname = ref("");
+const lastname = ref("");
 const per = ref("");
+const email = ref("");
 
 const addUser = () => {
   users.value.push({
     id: users.value.length + 1,
-    name: name.value,
-    permission: per.value,
+    Name: firstname.value + lastname.value,
+    Permission: per.value,
+    Email: email.value,
   });
-  alert("Thêm " + name.value + ", " + per.value + " thành công!");
+  alert(
+    "Thêm user với tên: " +
+      firstname.value +
+      " " +
+      lastname.value +
+      ", permission: " +
+      per.value +
+      ", email: " +
+      email.value +
+      " thành công!"
+  );
 };
 </script>
 <style scoped>
