@@ -6,7 +6,8 @@
         <span> Users Dashboard </span>
       </div>
       <div class="search">
-        <input type="text" placeholder="Search" class="searchinput" />
+        <!-- <input type="text" placeholder="Search" class="searchinput" /> -->
+        <FilterComponent v-model="search" ref="searchFilter" />
         <div class="right">
           <div class="button" v-show="isOpen">
             <TestModal />
