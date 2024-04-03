@@ -6,8 +6,8 @@
         <span> Users Dashboard </span>
       </div>
       <div class="search">
-        <!-- <input type="text" placeholder="Search" class="searchinput" /> -->
-        <FilterComponent v-model="search" ref="searchFilter" />
+        <input type="text" placeholder="Search" class="searchinput" v-model="search" />
+        <!-- <FilterComponent v-model="search" ref="searchFilter" /> -->
         <div class="right">
           <div class="button" v-show="isOpen">
             <TestModal />
@@ -61,7 +61,7 @@
         </div>
         <div class="details"></div>
       </div>
-      <template v-for="user in users" :key="user.Name">
+      <template v-for="user in filteredUsers" :key="user.Name">
         <div class="details">
           <div class="detail detailshare">
             <div class="namenrole name">
@@ -117,13 +117,13 @@
 <script setup>
 import HeaderLayout from "@/components/HeaderLayout.vue";
 import TestModal from "./Test/TestModal.vue";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useStore } from "vuex";
 
 const isOpen = ref(true);
-
 const store = useStore();
 const users = ref(store.state.DataDashBoard.users);
+const search = ref("");
 
 const edituser = (user) => {
   alert("Users: " + user.Name);
@@ -132,6 +132,19 @@ const deleteuser = (user) => {
   users.value.splice(users.value.indexOf(user), 1);
   alert("Xóa " + user.Name + " thành công!");
 };
+
+const filteredUsers = computed(() => {
+  if (search.value) {
+    return users.value.filter((user) => {
+      return search.value
+        .toLowerCase()
+        .split(" ")
+        .every((v) => user.Name.toLowerCase().includes(v));
+    });
+  } else {
+    return users.value;
+  }
+});
 </script>
 
 <style scoped>
