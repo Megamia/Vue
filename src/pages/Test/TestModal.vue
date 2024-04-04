@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <button @click="isOpen = true" class="buttonadduser">Add user +</button>
+    <!-- <button @click="isOpen = true" class="buttonadduser">Add user +</button> -->
     <template v-for="user in users" :key="user.Name">
       <Teleport to="body">
         <div class="modal" v-if="isOpen">
@@ -8,7 +8,9 @@
             <div class="about">
               <div class="title">
                 <span>Add User</span>
-                <button class="modal-default-button" @click="isOpen = false">X</button>
+                <button class="modal-default-button" @click="$emit('close-modal')">
+                  X
+                </button>
               </div>
               <div class="infor">
                 <div class="userid">
@@ -40,6 +42,7 @@
                       placeholder="Email ID *"
                       class="nameinput input"
                     />
+                    <!-- v-model="user.Email.value" -->
                     <input
                       type="text"
                       v-model="per"
@@ -102,6 +105,7 @@
                     Add User
                   </button>
                   <button @click="isOpen = false" class="buttoncancel">Cancel</button>
+                  <!-- <button @click="close(user)" class="buttoncancel">Cancel</button> -->
                 </div>
               </div>
             </div>
@@ -113,8 +117,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-const isOpen = ref(false);
+import { ref, defineProps } from "vue";
+const isOpen = ref(true);
 import { useStore } from "vuex";
 
 const store = useStore();
@@ -131,6 +135,13 @@ const firstname = ref("");
 const lastname = ref("");
 const per = ref("");
 const email = ref("");
+
+defineProps({
+  isOpen: {
+    type: Boolean,
+    default: false,
+  },
+});
 
 const addUser = () => {
   users.value.push({

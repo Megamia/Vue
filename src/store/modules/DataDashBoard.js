@@ -1,7 +1,7 @@
 import { ref } from "vue";
 
 export default {
-  namespaced:true,
+  namespaced: true,
 
   state: {
     users: ref([
@@ -56,11 +56,21 @@ export default {
       },
     ]),
   },
+  getters: {
+    // selectedUserName(state) {
+    //   return state.users.Name;
+    // },
+  },
+
   mutations: {
+    // editUser(state, newUser) {
+    //   state.users = newUser;
+    // },
   },
   actions: {
-  },
-  getters: {
-    // users:state=>state.users,
+    // editUserAndOpen({ commit }, payload) {
+    //   commit('editUser', payload.newUser);
+    //   commit('setOpen', true);
+    // },
   },
 };
