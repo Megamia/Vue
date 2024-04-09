@@ -13,7 +13,7 @@
             <span>Add user +</span>
             <TestModal
               v-if="isModalOpen"
-              @close-modal="isOpen = false"
+              @close-modal="(isOpen = false), (emailselected = null)"
               :emailselected="emailselected"
             />
           </button>
