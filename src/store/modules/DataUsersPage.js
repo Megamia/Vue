@@ -36,6 +36,5 @@ export default {
   actions: {
   },
   getters: {
-    // users:state=>state.users,
   },
 };

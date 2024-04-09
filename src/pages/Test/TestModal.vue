@@ -7,8 +7,16 @@
           <div class="main">
             <div class="about">
               <div class="title">
-                <span>Add User</span>
-                <button class="modal-default-button" @click="$emit('close-modal')">
+                <span v-if="emailselected == null || emailselected == ''">Add User</span>
+                <span v-else>Update User</span>
+
+                <span class="check" @click="check(emailselected)"
+                  >Data: {{ emailselected }}</span
+                >
+                <button
+                  class="modal-default-button"
+                  @click="$emit('close-modal'), (isOpen = false)"
+                >
                   X
                 </button>
               </div>
@@ -49,7 +57,7 @@
                       placeholder="Mobile No"
                       class="nameinput input"
                     />
-                    <select v-model="selected" value="" class="nameinput input">
+                    <select class="nameinput input">
                       <option disabled value="">Please select one</option>
                       <option value="A">A</option>
                       <option value="B">B</option>
@@ -88,23 +96,43 @@
                   <label class="moduleper">{{ option.name }}</label>
                   <div class="percheck">
                     <div class="read">
-                      <input type="checkbox" v-model="read" value="read" id="read" />
+                      <!-- <input type="checkbox" v-model="read" value="read" id="read" /> -->
+                      <input type="checkbox" />
                     </div>
                     <div class="write">
-                      <input type="checkbox" v-model="write" value="write" id="write" />
+                      <!-- <input type="checkbox" v-model="write" value="write" id="write" /> -->
+                      <input type="checkbox" />
                     </div>
                     <div class="delete">
-                      <input type="checkbox" v-model="del" value="delete" id="delete" />
+                      <!-- <input type="checkbox" v-model="del" value="delete" id="delete" /> -->
+                      <input type="checkbox" />
                     </div>
                   </div>
                 </div>
               </div>
               <div class="button">
                 <div class="bothbutton">
-                  <button @click="addUser(user), (isOpen = false)" class="buttonadd">
+                  <button
+                    v-if="emailselected == null || emailselected == ''"
+                    @click="addUser(user), $emit('close-modal'), (isOpen = false)"
+                    class="buttonadd"
+                  >
                     Add User
                   </button>
-                  <button @click="isOpen = false" class="buttoncancel">Cancel</button>
+                  <button
+                    v-else
+                    @click="$emit('close-modal'), (isOpen = false)"
+                    class="buttonadd"
+                  >
+                    Update User
+                  </button>
+                  <button
+                    @click="$emit('close-modal'), (isOpen = false), cancel"
+                    class="buttoncancel"
+                  >
+                    Cancel
+                  </button>
+                  <p>{{ userWithEmail }}</p>
                   <!-- <button @click="close(user)" class="buttoncancel">Cancel</button> -->
                 </div>
               </div>
@@ -117,7 +145,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from "vue";
+import { ref, defineProps, onMounted } from "vue";
 const isOpen = ref(true);
 import { useStore } from "vuex";
 
@@ -135,11 +163,15 @@ const firstname = ref("");
 const lastname = ref("");
 const per = ref("");
 const email = ref("");
-
-defineProps({
+const userWithEmail = ref("");
+const props = defineProps({
   isOpen: {
     type: Boolean,
     default: false,
+  },
+  emailselected: {
+    type: String,
+    default: null,
   },
 });
 
@@ -150,6 +182,7 @@ const addUser = () => {
     Permission: per.value,
     Email: email.value,
   });
+
   alert(
     "Thêm user với tên: " +
       firstname.value +
@@ -159,9 +192,46 @@ const addUser = () => {
       per.value +
       ", email: " +
       email.value +
-      " thành công!"
+      " thành công!" +
+      ", isOpen: " +
+      isOpen.value
   );
 };
+const check = (emailselected) => {
+  const data = JSON.stringify(users.value.find((item) => item.Email === emailselected));
+
+  alert("Data user: " + data);
+};
+
+onMounted(() => {
+  const emailselected = props.emailselected;
+  // alert("emailselected: " + emailselected);
+  const user = users.value.find((item) => item.Email === emailselected);
+
+  if (user) {
+    const userdata = JSON.stringify(user);
+    console.log("Data user: " + userdata);
+    const nameParts = user.Name.split(" ");
+    if (nameParts.length > 1) {
+      firstname.value = nameParts[0];
+      lastname.value = nameParts.slice(1).join(" ");
+    } else {
+      firstname.value = user.Name;
+      lastname.value = "";
+    }
+    email.value = user.Email;
+    per.value = user.Permission;
+  } else {
+    console.log("User not found!");
+  }
+});
+// const cancel = () => {
+//   if (userWithEmail.value.length > 1) {
+//     console.log("Data Lấy được: " + userWithEmail.value);
+//   } else {
+//     console.log("Không lấy được userwithemail");
+//   }
+// };
 </script>
 <style scoped>
 .modal {
@@ -170,7 +240,7 @@ const addUser = () => {
   left: 0;
   background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: 115.5%;
+  /* height: 115.5%; */
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -183,6 +253,7 @@ const addUser = () => {
   flex-direction: column;
   margin-inline: 200px;
   margin-block: 150px;
+  /* height: 100vh; */
 }
 .main {
   display: flex;
@@ -345,5 +416,8 @@ const addUser = () => {
   padding-block: 7px;
   padding-inline: 20px;
   width: 120px;
+}
+.check {
+  cursor: pointer;
 }
 </style>
