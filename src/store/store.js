@@ -5,12 +5,12 @@ import AddModal from "@/pages/Test/AddModal.vue";
 import DataDashBoard from "./modules/DataDashBoard";
 import DataUsersPage from "./modules/DataUsersPage";
 export const store = createStore({
-namespaced:true,
-modules:{
-  DataDashBoard,
-  DataUsersPage,
-    AddModal
-},
+  namespaced: true,
+  modules: {
+    DataDashBoard,
+    DataUsersPage,
+    AddModal,
+  },
   state: {
     result: 10,
     users: [
@@ -40,10 +40,7 @@ modules:{
       },
     ],
   },
-  mutations: {
-  },
-  actions: {
-  },
-  getters: {
-  },
+  mutations: {},
+  actions: {},
+  getters: {},
 });

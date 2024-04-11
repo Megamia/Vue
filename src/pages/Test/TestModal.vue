@@ -121,7 +121,7 @@
                   </button>
                   <button
                     v-else
-                    @click="$emit('close-modal'), (isOpen = false)"
+                    @click="$emit('close-modal'), (isOpen = false), update()"
                     class="buttonadd"
                   >
                     Update User
@@ -163,6 +163,7 @@ const firstname = ref("");
 const lastname = ref("");
 const per = ref("");
 const email = ref("");
+// const newemail = ref("");
 const userWithEmail = ref("");
 const props = defineProps({
   isOpen: {
@@ -225,6 +226,26 @@ onMounted(() => {
     console.log("User not found!");
   }
 });
+
+const update = () => {
+  const emailselected = props.emailselected;
+  // alert("emailselected: " + emailselected);
+  const user = users.value.find((item) => item.Email === emailselected);
+  if (user) {
+    user.Name = firstname.value + lastname.value;
+    user.Permission = per.value;
+    user.Email = email.value;
+    console.log("Update Data: " + user.Name + "," + user.Permission + "," + user.Email);
+  } else {
+    console.log("Lỗi");
+  }
+  // newemail.value = user.Email;
+  // console.log("New Email: " + user.Email);
+  // store.commit("DataDashBoard/changeEmail", newemail.value);
+
+  // alert("Data: " + newemail.value);
+};
+
 // const cancel = () => {
 //   if (userWithEmail.value.length > 1) {
 //     console.log("Data Lấy được: " + userWithEmail.value);

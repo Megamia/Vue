@@ -63,10 +63,9 @@ export default {
   },
 
   mutations: {
-    // editUser(state, newUser) {
-    //   state.users = newUser;
-    // },
+    
   },
+  
   actions: {
     // editUserAndOpen({ commit }, payload) {
     //   commit('editUser', payload.newUser);
